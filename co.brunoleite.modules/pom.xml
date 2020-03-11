@@ -12,10 +12,10 @@
     <artifactId>co.brunoleite.modules</artifactId>
 
     <modules>
-        <module>../co.brunoleite.modules.animal</module>
-        <module>../co.brunoleite.modules.animal.factory</module>
-        <module>../co.brunoleite.modules.animal.concretefactory</module>
-        <module>../co.brunoleite.modules.animal.app</module>
+        <module>co.brunoleite.modules.animal</module>
+        <module>co.brunoleite.modules.animal.factory</module>
+        <module>co.brunoleite.modules.animal.concretefactory</module>
+        <module>co.brunoleite.modules.animal.app</module>
     </modules>
 
 
