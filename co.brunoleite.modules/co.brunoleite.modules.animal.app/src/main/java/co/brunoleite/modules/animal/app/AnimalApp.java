@@ -1,4 +1,4 @@
-package co.brunoleite.animal.modules.app;
+package co.brunoleite.modules.animal.app;
 
 import co.brunoleite.modules.animal.Animal;
 import co.brunoleite.modules.animal.factory.AnimalFactoryProvider;
