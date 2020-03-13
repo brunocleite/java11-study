@@ -84,4 +84,15 @@ java11 -p out -m co.brunoleite.modules.animal.app/co.brunoleite.modules.animal.a
 
 ### 1. Describe the components of Services including directives
 
-The specific services directives are `provides..with` and `uses`. Those uses are described on [section 2](#2. Declare modules and enable access between modules) above
+The specific services directives are `provides..with` and `uses`. Those uses are described on [section 2](#2-declare-modules-and-enable-access-between-modules) above.
+
+### 2. Design a service type, load the services using ServiceLoader, check for dependencies of the services including consumer module and provider module
+
+In this example:
+
+The service module is `co.brunoleite.modules.animal.factory`
+
+The service provider module is `co.brunoleite.modules.animal.concretefactory`
+
+The consumer module is `co.brunoleite.modules.animal.app`. It uses the ServiceLoader to load the provider.
+
