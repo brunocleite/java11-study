@@ -11,7 +11,7 @@ This applications is comprised of 5 modules:
 4. `co.brunoleite.modules.animal.app` -> the application that uses the other 3 modules
 5. `co.brunoleite.modules.animal.extended` -> some other animals declarations, used for 'requires static' example
 
-## Certification topic checklist: Understanding Modules (1Z0-815 and 1Z0-817)
+## Certification topic: Understanding Modules (1Z0-815 and 1Z0-817)
 
 ### 1. Describe the Modular JDK
 
@@ -79,3 +79,9 @@ javac11 -d out \
 
 java11 -p out -m co.brunoleite.modules.animal.app/co.brunoleite.modules.animal.app.AnimalApp
 ```
+
+## Certification topic: Services in a modular application (1Z0-816 and 1Z0-817)
+
+### 1. Describe the components of Services including directives
+
+The specific services directives are `provides..with` and `uses`. Those uses are described on [section 2](#2. Declare modules and enable access between modules) above
