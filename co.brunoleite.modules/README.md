@@ -2,25 +2,31 @@
 
 [JEP 261: Module system](http://openjdk.java.net/jeps/261)
 
-For understanding the new Java module system that was introduced on Java 9 I've built an application that uses all the features.
-This applications is comprised of 4 modules:
+For understanding the new Java module system that was introduced on Java 9 an application was built that uses all the features.
+This applications is comprised of 5 modules:
 
 1. `co.brunoleite.modules.animal` -> declares base and child model classes, Animal, Cat and Dog
 2. `co.brunoleite.modules.animal.factory` -> declares interfaces for Animal factories (using abstract factory pattern)
 3. `co.brunoleite.modules.animal.concretefactory` -> declares implementations for the Animal factories
-4. `co.brunoleite.modules.animal.app` -> the application that uses the other 3 modules 
+4. `co.brunoleite.modules.animal.app` -> the application that uses the other 3 modules
+5. `co.brunoleite.modules.animal.extended` -> some other animals declarations, used for 'requires static' example
 
-## Certification topic checklist: Understanding Modules
+## Certification topic checklist: Understanding Modules (1Z0-815 and 1Z0-817)
 
 ### 1. Describe the Modular JDK
 
-TBD
+Beginning on Java 9 the JDK has been splitted up into modules. This enables the developer to use a lightweight version of the JDK with just the needed modules.
+The Java API modules are also referred as `platform modules` and their names begin with `java.*`
+The `java.base` module is the main module and is available to all applications even if it is not declared on `module-info.java` file.
+ 
 
 ### 2. Declare modules and enable access between modules
 
 Module declaration is available on all 4 modules through the `module-info.java`
 
 The `exports` directive is used on `co.brunoleite.modules.animal` and `co.brunoleite.modules.animal.factory` modules.
+
+The `exports..to` directive is used on `co.brunoleite.modules.animal`. Please have in mind that even if `co.brunoleite.modules.animal.factory` declares transitive dependency on `co.brunoleite.modules.animal` it wouldn't be available for `co.brunoleite.modules.animal.app` if it wasn't in the `to..` clause.  
 
 The `requires` directive is used on `co.brunoleite.modules.animal.app` and `co.brunoleite.module.animal.concretefactory`
 
@@ -29,6 +35,9 @@ The `requires transitive` directive is used on `co.brunoleite.modules.animal.fac
 The `provides..with` directive is used on `co.brunoleite.modules.animal.concretefactory` to provide implementations for AnimalFactory
 
 The `uses` directive is used on `co.brunoleite.modules.animal.app` to indicate the use of a service
+
+The `opens` directive is used on `co.brunoleite.modules.animal.app` to open the `Bird` class to runtime access by `co.brunoleite.modules.animal.concretefactory` method `createCustom(Class<A extends Animal> animal)`. It could be used `open` on the whole module declaration also.
+ 
 
 ### 3. Describe how a modular project is compiled and run
 
@@ -66,7 +75,7 @@ This example shows the use of `module-source-path` which compiles various depend
 ```bash
 javac11 -d out \
     --module-source-path "./*/src/main/java" \
-    "co.brunoleite.modules.animal.app/src/main/java/co/brunoleite/modules/animal/app/AnimalApp.java"
+    $(find -name "*.java")
 
 java11 -p out -m co.brunoleite.modules.animal.app/co.brunoleite.modules.animal.app.AnimalApp
 ```

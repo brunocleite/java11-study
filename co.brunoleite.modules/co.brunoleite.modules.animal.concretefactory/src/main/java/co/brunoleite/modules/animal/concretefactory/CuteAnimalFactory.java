@@ -6,7 +6,7 @@ import co.brunoleite.modules.animal.CuteDog;
 import co.brunoleite.modules.animal.Dog;
 import co.brunoleite.modules.animal.factory.AnimalFactory;
 
-public class CuteAnimalFactory implements AnimalFactory {
+public class CuteAnimalFactory extends AbstractAnimalFactory {
 
     @Override
     public Cat createCat() {

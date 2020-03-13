@@ -16,6 +16,7 @@
         <module>co.brunoleite.modules.animal.factory</module>
         <module>co.brunoleite.modules.animal.concretefactory</module>
         <module>co.brunoleite.modules.animal.app</module>
+        <module>co.brunoleite.modules.animal.extended</module>
     </modules>
 
 

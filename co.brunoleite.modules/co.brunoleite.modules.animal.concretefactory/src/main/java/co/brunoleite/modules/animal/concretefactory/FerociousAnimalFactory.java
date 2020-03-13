@@ -6,7 +6,7 @@ import co.brunoleite.modules.animal.FerociousCat;
 import co.brunoleite.modules.animal.FerociousDog;
 import co.brunoleite.modules.animal.factory.AnimalFactory;
 
-public class FerociousAnimalFactory implements AnimalFactory {
+public class FerociousAnimalFactory extends AbstractAnimalFactory {
     @Override
     public Cat createCat() {
         return new FerociousCat();
