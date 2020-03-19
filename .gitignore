@@ -2,3 +2,8 @@ out
 target
 *.iml
 .idea
+.md
+*/mod
+*/lib
+*/module
+*/nomodule

@@ -26,6 +26,8 @@
     </build>
     <modules>
         <module>co.brunoleite.modules</module>
+        <module>co.brunoleite.modules.migration</module>
+        <module>co.brunoleite.interfaces</module>
     </modules>
 
 </project>

@@ -1,6 +1,6 @@
 # Java 11 upgrade (from 6,7,8) certification study guide
 
-This repository covers all the topics from [Upgrade OCP Java 6, 7 & 8 to Java SE 11 Developer | 1Z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817) topics.
+This repository covers all the topics from the Oracle exam [Upgrade OCP Java 6, 7 & 8 to Java SE 11 Developer | 1Z0-817](https://education.oracle.com/upgrade-ocp-java-6-7-8-to-java-se-11-developer/pexam_1Z0-817).
 
 ![1Z0-817 Exam topics](images/1Z0-817-exam-topics.png)
 
@@ -16,3 +16,11 @@ Here's a list of directories and topics covered:
 - `Migration to a modular application` 
 
 
+## Bibliography
+
+[1Z0-817: Study Guide - By Mikalai Zaikin](http://java.boot.by/ocpjd11-upgrade-guide/) - Excellent guide with more detailed information on each topic
+
+### Modules
+
+- [Oracle Blog - Advanced Modular Development - by Yolande Poirier](https://blogs.oracle.com/advanced-modular-development-v2)
+- [State of the module - Mark Heinhold](https://openjdk.java.net/projects/jigsaw/spec/sotms/)
